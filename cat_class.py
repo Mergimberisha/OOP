@@ -1,6 +1,8 @@
+from animal_parent import *
 # Abstract and create the class cat
 
-class Cat():
+
+class Cat(Animal_parent):
 
     # This is a special method
     # It comes defined either way but we can re-write it
@@ -10,16 +12,15 @@ class Cat():
             # We should give it a name... possible Max :)
 
         # Refers to the instance of the object
-    def __index__(self):
+    def __init__(self):
         self.name = 'Calm Cax'
+        super().__init__(name = "Garfield", age = 5, limbs = 4)
+
 
 
 # This is a method that can be used by a dog instance
     def speak(self, person = ''):
         return 'meow, meow! I see you there' + ' ' + person
-
-    def eat(self, food):
-        return 'Nom, nom, nom, nom!' + ' ' + food.lower()
 
     def sleep(self, talk = ''):
         return 'zzZZzzZZz, ZZzzzZZzz!' + ' ' + talk
@@ -35,3 +36,11 @@ class Cat():
 
 # Initialising a Cat Object
 cat_instance1 = Cat()
+
+
+cat_animal = Cat()
+
+print(cat_animal.eat())
+print(cat_animal.limbs)
+print(cat_animal.name)
+print(cat_animal.age)
