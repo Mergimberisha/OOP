@@ -1,6 +1,6 @@
 from monster_characteristics import Monster
 
-class student(Monster):
+class Student(Monster):
     def __init__(self, name, tax_number, fur, student_no, skill_list):
         super().__init__(name, tax_number, fur)
         self.__student_no = student_no
